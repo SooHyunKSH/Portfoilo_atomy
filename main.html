@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Atomy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="one page scroll">
+  <link rel="stylesheet" href="./css/initial.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/jquery.fullPage.css">
+  <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
+  <script type="text/javascript" src="./js/jquery.fullpage.extensions.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="./js/common.js"></script>
+  <!--[if lt IE 9]>
+  <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- go to top 버튼 -->
+  <div class="go_to_top">
+    <a href="#intro">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"/></svg>
+    </a>
+  </div>
+  <!-- mobile_btn -->
+  <input type="checkbox" name="gnbcheck" id="gnbcheck">
+  <label for="gnbcheck" id="gnbbtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <header id="header">
+    <h1 id="top_logo"><a href="#main"><img src="./img/f_logo.png" alt="logo"></a></h1>
+    <nav id="gnb">
+      <label for="gnbcheck" id="mobile_close_btn"></label>
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#atomypark">Atomy Park</a></li>
+        <li><a href="#csr">CSR</a></li>
+        <li><a href="#global">Global</a></li>
+        <li><a href="#news">News</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- mainbanner -->
+  <div id="fullpage">
+    <div id="main" class="section" data-anchor = "main" >
+      <video id="main_video" autoplay muted data-autoplay loop playsinline>
+        <source data-src="./img/mVisual_AV.mp4" type="video/mp4"></source>
+      </video>
+      <div class="scroll_down">
+        <span>Scroll Down</span>
+        <i class="line"></i>
+      </div>
+    </div>
+    <div id="about" class="section" data-anchor = "about" >
+      <div class="section_wrap section01">
+        <div class="section_inner">
+          section2
+        </div>
+      </div>
+    </div>
+    <div id="brand" class="section" data-anchor = "brand" >
+      <div class="section_wrap section02">
+        <div class="text_box">
+          <div class="title">Product</div>
+          <p>애터미는 절대품질 절대가격의 전략으로<br>좋은 품질의 제품만을 공급합니다.</p>
+          <div class="common_btn"><a href="#">애터미 제품철학</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="atomypark" class="section" data-anchor = "atomypark" >
+      <div class="text_box">
+        <div class="title">Atomy Park</div>
+        <p>새로 꿈꾸는 100년을 위한<br>더 큰 비전이 될 것을 약속 드립니다.</p>
+        <div class="common_btn section03_btn01"><a href="#">애터미 파크 소개</a></div>
+        <div class="common_btn section03_btn02"><a href="#">애터미 투어 신청</a></div>
+      </div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+    <div id="csr" class="section" data-anchor = "csr" >
+      <div class="section_wrap section05">
+        <div class="section_inner">
+          <h1>Social Contribution</h1>
+        </div>
+      </div>
+    </div>
+    <div id="global" class="section" data-anchor = "global" >section6</div>
+    <div id="news" class="section" data-anchor = "news" >
+      <div class="section_wrap section07">
+        <div class="section_inner">
+          <div class="headnews">
+            <img src="./img/news01.jpg" alt="news_img">
+            <p class="caption">
+              <strong>News<br>Room</strong>
+              <br><br>'애터미 DNA' 교보문고 경제∙경영분야 1위,<br>종합 3위 등극!
+            </p>
+          </div>
+          <div class="subnews">
+            <div class="newsitem">
+              <div class="news_img">
+                <img src="./img/news02.jpg" alt="news_img">
+              </div>
+              <p class="caption">애터미파크 깜짝 방문한 권칠승 ..</p>
+            </div>
+            <div class="newsitem">
+              <div class="news_img">
+                <img src="./img/news03.jpg" alt="news_img">
+              </div>
+              <p class="caption">애터미, 안과산업 발전 위해 의료..</p>
+            </div>
+            <div class="newsitem">
+              <div class="news_img">
+                <img src="./img/news04.jpg" alt="news_img">
+              </div>
+              <p class="caption">애터미, 친환경 프로젝트 '블루..</p>
+            </div>
+            <div class="newsitem">
+              <div class="news_img">
+                <img src="./img/news05.png" alt="news_img">
+              </div>
+              <p class="caption">애터미(주)CJ대한통운, '친환경..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <footer id="footer">
+        <div class="section_inner">
+          <h1 class="logo"></h1>
+          <div class="adress">
+            <p>
+              <em>애터미(주)</em>&nbsp;&nbsp;&nbsp;대표이사 : 박한길, 김대현, 최승곤&nbsp;&nbsp;&nbsp;본사 : (32543) 충청남도 공주시 백제문화로 2148-21
+            </p>
+            <p class="copyright">© 2020 ATOMY CO., LTD. ALL RIGHTS RESERVED</p>
+          </div>
+        </div>
+      </footer>
+  </div>
+</body>
