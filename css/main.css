@@ -108,6 +108,19 @@ input[type="checkbox"]#gnbcheck {
   top: 0;
   z-index: 800;
   padding: 0 5rem;
+  transition: 0.3s;
+}
+
+#header.on{
+  background: #fff;
+}
+
+#header.on #top_logo a{
+  background: url('../img/f_logo01.png') no-repeat center;
+}
+
+#header.on #gnb ul li a{
+  color: #333;
 }
 
 /* 상단로고 */
@@ -119,6 +132,7 @@ input[type="checkbox"]#gnbcheck {
   height: 40px;
   line-height: 100px;
   padding: 0.5rem 2rem;
+  background: url('../img/f_logo.png') no-repeat center;
 }
 
 /* gnb area */
@@ -140,7 +154,7 @@ input[type="checkbox"]#gnbcheck {
   display: block;
   font-size: 18px;
   height: 60px;
-  line-height: 90px;
+  line-height: 95px;
   padding: 0 20px;
   text-transform: uppercase;
 }
@@ -318,30 +332,177 @@ input[type="checkbox"]#gnbcheck {
   background-image: url('../img/atomypark_bg4.jpg');
 }
 
-/* section07 area */
-.section07{
+.fp-controlArrow{
+  display: none;
+}
+
+.fp-slidesNav{
+  text-align: center;
+}
+
+.fp-slidesNav ul li a span{
+  background: #fff;
+}
+
+/* section04 area */
+.section04 .section_inner{
+  padding-top: 3rem;
+}
+
+.section04 .section_inner h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: #000
+}
+
+.section04 .section_inner .csr_item_wrap{
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item{
+  display: table-cell;
+  position: relative;
+  padding: 2.5rem 1rem 0;
+  transition: .3s ease;
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item:hover{
+  transform: translateY(-20%);
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item:hover .caption{
+  /* bottom: -30%; */
+  top: 10%;
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item .item_inner{
+  position: relative;
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item .caption{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  /* bottom: -90%; */
+  top: 75%;
+  padding: 2rem 2rem;
+  transition: bottom .3s ease;
+  background: rgba(72,171,226,0.9);
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item .caption strong{
+  font-size: 1.1rem;
+  line-height: 1.45rem;
+  font-weight: 500;
+  height: 20%;
+  color: #fff;
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item .caption .more_txt{
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  padding: 1.8rem 0 2rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.section04 .section_inner .csr_item_wrap .csr_item .caption .more_btn{
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* section05 area */
+.section05{
+  background: url("../img/worldwide_bg.jpg") center;
+}
+
+.section05 .map{
+  position: absolute;
+  width: 60rem;
+  height: 36rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5rem;
+  background-image: url('../img/worldwide_map.svg');
+  background-repeat: no-repeat;
+}
+
+.section05 .map .map_tab{
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+  height: 2.7rem;
+  z-index: 10;
+}
+
+.section05 .map .map_tab ul{
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.section05 .map .map_tab ul li{
+  display: inline-block;
+  float: left;
+  width: 20%;
+  padding: 0 0.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.section05 .map .map_tab ul li a{
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  color: #555;
+  background-color: rgba(255, 255, 255, .4);
+  transition: .3s ease;
+  font-family: "Noto Sans KR" sans-serif;
+}
+
+.section05 .map .map_tab ul li:hover a{
+  background: #3e8fee;
+  color: #fff;
+}
+
+.section05 .map .map_tab ul li:nth-of-type(4) a{
+  padding: 0.45rem 0;
+  line-height: 0.9rem;
+}
+
+/* section06 area */
+.section06{
   background: url('../img/mCnts03_bg.jpg') no-repeat center;
   background-size: cover;
 }
 
-.section07 .section_inner{
+.section06 .section_inner{
   padding: 3rem 6rem 0 6rem;
-  margin: 0 4rem;
 }
 
-.section07 .section_inner .headnews{
+.section06 .section_inner .headnews{
   display: inline-block;
   width: 100%;
   padding: 2.5rem 0 1.5rem;
 }
 
-.section07 .section_inner .headnews img{
+.section06 .section_inner .headnews img{
   width: 55%;
   float: left;
   height: 21.5rem;
 }
 
-.section07 .section_inner .headnews .caption{
+.section06 .section_inner .headnews .caption{
   position: relative;
   display: inline-block;
   float: left;
@@ -354,7 +515,7 @@ input[type="checkbox"]#gnbcheck {
   color: #fff;
 }
 
-.section07 .section_inner .headnews .caption::before{
+.section06 .section_inner .headnews .caption::before{
   content: '';
   position: absolute;
   top: 0;
@@ -363,7 +524,7 @@ input[type="checkbox"]#gnbcheck {
   background-color: #0eaee8;
 }
 
-.section07 .section_inner .headnews .caption strong{
+.section06 .section_inner .headnews .caption strong{
   padding: 1.5rem 0;
   font-size: 3.5rem;
   line-height: 3.5rem;
@@ -371,42 +532,42 @@ input[type="checkbox"]#gnbcheck {
   color: #fff;
 }
 
-.section07 .section_inner .subnews{
+.section06 .section_inner .subnews{
   display: inline-block;
   width: 100%;
   padding-bottom: 1.5rem;
 }
 
-.section07 .section_inner .subnews .newsitem{
+.section06 .section_inner .subnews .newsitem{
   width: 25%;
   float: left;
   padding-right: 1rem;
   box-sizing: border-box;
 }
 
-.section07 .section_inner .subnews .newsitem:last-of-type{
+.section06 .section_inner .subnews .newsitem:last-of-type{
   padding-right: 0;
 }
 
-.section07 .section_inner .subnews .newsitem .news_img{
+.section06 .section_inner .subnews .newsitem .news_img{
   overflow: hidden;
   height: 8rem;
   transition: .5s;
   background: #000;
 }
 
-.section07 .section_inner .subnews .newsitem .news_img img{
+.section06 .section_inner .subnews .newsitem .news_img img{
   width: 100%;
   height: 100%;
   transition: .5s;
 }
 
-.section07 .section_inner .subnews .newsitem .news_img:hover img{
+.section06 .section_inner .subnews .newsitem .news_img:hover img{
   transform: scale(1.2,1.2);
   opacity: 0.5;
 }
 
-.section07 .section_inner .subnews .newsitem .caption{
+.section06 .section_inner .subnews .newsitem .caption{
   display: block;
   font-size: 0.9rem;
   line-height: 1.3rem;
@@ -419,7 +580,7 @@ input[type="checkbox"]#gnbcheck {
 #footer{
   position: relative;
   width: 100%;
-  height: 8.75rem;
+  height: 8.75rem !important;
   background: #272c2f;
 }
 
@@ -447,6 +608,10 @@ input[type="checkbox"]#gnbcheck {
 #footer .adress p em{
   font-style: normal;
   font-weight: 500;
+}
+
+#footer .fp-tableCell{
+  display: inline-block;
 }
 
 /* 반응형 style */

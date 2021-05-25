@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="one page scroll">
   <link rel="stylesheet" href="./css/initial.min.css">
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/jquery.fullPage.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
-  <script type="text/javascript" src="./js/jquery.fullpage.extensions.min.js"></script>
+  <!-- <script type="text/javascript" src="./js/jquery.fullpage.extensions.min.js"></script> -->
   <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="./js/slick.js"></script>
   <script type="text/javascript" src="./js/common.js"></script>
   <!--[if lt IE 9]>
   <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,7 +34,7 @@
     <span></span>
   </label>
   <header id="header">
-    <h1 id="top_logo"><a href="#main"><img src="./img/f_logo.png" alt="logo"></a></h1>
+    <h1 id="top_logo"><a href="#main"></a></h1>
     <nav id="gnb">
       <label for="gnbcheck" id="mobile_close_btn"></label>
       <ul>
@@ -59,7 +62,26 @@
     <div id="about" class="section" data-anchor = "about" >
       <div class="section_wrap section01">
         <div class="section_inner">
-          section2
+          <div class="about_wrap">
+            <div class="counter">
+              <p><em>1</em> / 6</p>
+            </div>
+            <div class="about_history slick-slider slick-vertical">
+              <button class="slick-prev slick-arrow"></button>
+              <div class="slick-list">
+                <div class="slick-track">
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img01.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img02.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img03.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img04.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img05.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img06.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img02.jpg" alt="aboutimg"></div>
+                    <div class="about_item_img slick-slider"><img src="./img/about_history_img01.jpg" alt="aboutimg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -85,15 +107,67 @@
       <div class="slide"></div>
     </div>
     <div id="csr" class="section" data-anchor = "csr" >
-      <div class="section_wrap section05">
+      <div class="section_wrap section04">
         <div class="section_inner">
           <h1>Social Contribution</h1>
+          <div class="csr_item_wrap">
+            <div class="csr_item">
+              <div class="item_inner">
+                <div class="csr_item_img">
+                  <img src="./img/social_img01.jpg" alt="csr_img">
+                </div>
+                <div class="caption">
+                  <strong>미혼모 지원을 위한<br>[생소맘] 기부자 조언기금 운용</strong>
+                  <span class="more_txt">2019년 6월, 애터미는 사랑의 열매 사회복지공동모금회에 미혼모 지원을 위해 100억 원을 기부했습니다.</span>
+                  <span class="more_btn">자세히보기</span>
+                </div>
+              </div>
+            </div>
+            <div class="csr_item">
+              <div class="item_inner">
+                <div class="csr_item_img">
+                  <img src="./img/social_img01.jpg" alt="csr_img">
+                </div>
+                <div class="caption">
+                  <strong>미혼모 지원을 위한<br>[생소맘] 기부자 조언기금 운용</strong>
+                  <span class="more_txt">2019년 6월, 애터미는 사랑의 열매 사회복지공동모금회에 미혼모 지원을 위해 100억 원을 기부했습니다.</span>
+                  <span class="more_btn">자세히보기</span>
+                </div>
+              </div>
+            </div>
+            <div class="csr_item">
+              <div class="item_inner">
+                <div class="csr_item_img">
+                  <img src="./img/social_img01.jpg" alt="csr_img">
+                </div>
+                <div class="caption">
+                  <strong>미혼모 지원을 위한<br>[생소맘] 기부자 조언기금 운용</strong>
+                  <span class="more_txt">2019년 6월, 애터미는 사랑의 열매 사회복지공동모금회에 미혼모 지원을 위해 100억 원을 기부했습니다.</span>
+                  <span class="more_btn">자세히보기</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="global" class="section" data-anchor = "global" >section6</div>
+    <div id="global" class="section" data-anchor = "global" >
+      <div class="section_wrap section05">
+        <div class="section_inner map">
+          <div class="map_tab">
+            <ul>
+              <li><a href="#">HQ</a></li>
+              <li><a href="#">Asia-Pacific</a></li>
+              <li><a href="#">North America</a></li>
+              <li><a href="#">Central & South<br>America</a></li>
+              <li><a href="#">Europe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="news" class="section" data-anchor = "news" >
-      <div class="section_wrap section07">
+      <div class="section_wrap section06">
         <div class="section_inner">
           <div class="headnews">
             <img src="./img/news01.jpg" alt="news_img">
@@ -131,16 +205,16 @@
         </div>
       </div>
     </div>
-      <footer id="footer">
-        <div class="section_inner">
-          <h1 class="logo"></h1>
-          <div class="adress">
-            <p>
-              <em>애터미(주)</em>&nbsp;&nbsp;&nbsp;대표이사 : 박한길, 김대현, 최승곤&nbsp;&nbsp;&nbsp;본사 : (32543) 충청남도 공주시 백제문화로 2148-21
-            </p>
-            <p class="copyright">© 2020 ATOMY CO., LTD. ALL RIGHTS RESERVED</p>
-          </div>
+    <div id="footer" class="section fp-auto-height" data-anchor = "footer" >
+      <div class="section_inner">
+        <h1 class="logo"></h1>
+        <div class="adress">
+          <p>
+            <em>애터미(주)</em>&nbsp;&nbsp;&nbsp;대표이사 : 박한길, 김대현, 최승곤&nbsp;&nbsp;&nbsp;본사 : (32543) 충청남도 공주시 백제문화로 2148-21
+          </p>
+          <p class="copyright">© 2020 ATOMY CO., LTD. ALL RIGHTS RESERVED</p>
         </div>
-      </footer>
+      </div>
+    </div>
   </div>
 </body>
