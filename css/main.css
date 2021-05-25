@@ -130,7 +130,7 @@ input[type="checkbox"]#gnbcheck {
 
 #top_logo a {
   height: 40px;
-  line-height: 100px;
+  line-height: 80px;
   padding: 0.5rem 2rem;
   background: url('../img/f_logo.png') no-repeat center;
 }
@@ -154,7 +154,7 @@ input[type="checkbox"]#gnbcheck {
   display: block;
   font-size: 18px;
   height: 60px;
-  line-height: 95px;
+  line-height: 80px;
   padding: 0 20px;
   text-transform: uppercase;
 }
@@ -433,6 +433,7 @@ input[type="checkbox"]#gnbcheck {
   margin-top: 5rem;
   background-image: url('../img/worldwide_map.svg');
   background-repeat: no-repeat;
+  transition: .5s;
 }
 
 .section05 .map .map_tab{
