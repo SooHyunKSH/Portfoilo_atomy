@@ -1,22 +1,11 @@
 $(function(){
-  // $('.about_history').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   asNavFor: '.about_history_lst',
-  //   arrows: true,
-  //   fade: false,
-  //   vertical: true,
-  //   verticalSwiping: true,
-  //   touchMove: false,
-  //   prevArrow: '<button class="slick-prev"><i class="xi-long-arrow-up"><span class="hide">Previous</span></i></button>',
-  //   nextArrow: '<button class="slick-next"><i class="xi-long-arrow-down"><span class="hide">Next</span></i></button>'
-  // });
-
   $('#fullpage').fullpage({
 		//options here
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     showActiveTooltip: true,
-		autoScrolling: false,
+		autoScrolling: true,
 		scrollHorizontally: true,
+    scrollingSpeed: 2000,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
     afterRender: function () {

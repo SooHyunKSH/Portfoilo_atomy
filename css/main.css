@@ -123,6 +123,7 @@ input[type="checkbox"]#gnbcheck {
 }
 
 #header .header_wrap {
+  position: relative;
   max-width: 64rem;
   margin: 0 auto;
 }
@@ -141,9 +142,8 @@ input[type="checkbox"]#gnbcheck {
 
 /* gnb area */
 #gnb {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  position: relative;
+  float: right;
 }
 
 #gnb ul {
@@ -296,18 +296,101 @@ input[type="checkbox"]#gnbcheck {
 
 .about_wrap .slide_container {
   float: left;
-}
-
-.about_wrap .slide_container .slide_wrap {
   width: 22.7rem;
   height: 34.2rem;
   overflow: hidden;
   box-shadow: 0.75rem 0.75rem 1.5rem rgba(0, 0, 0, 25%);
 }
 
-.about_wrap .slide_container .slide_wrap .about_item_img img {
+.about_wrap .slide_container .slide_wrap {
+  position: relative;
+}
+
+.about_wrap .slide_container .slide_wrap .about_item_img img,
+.about_wrap .slide_container .slide_wrap .about_item_img{
   width: 100%;
   height: 100%;
+}
+
+.about_wrap .slide_txt_container{
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 23rem;
+  height: 30rem;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.about_wrap .slide_txt_container .slide_wrap{
+  position: relative;
+  top: -4rem;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt{
+  position: relative;
+  width: 22rem;
+  padding: 1.3rem;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt .counter_wrap{
+  display: block;
+  font-size: 2.75rem;
+  font-weight: bold;
+  line-height: 3rem;
+  letter-spacing: -0.05rem;
+  color: #e9e7e7;
+  transition: all .5s;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt .counter_wrap .count{
+  display: inline-block;
+  margin-right: 0.25rem;
+  line-height: 3rem;
+  transition: font-size .5s;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt strong{
+  display: none;
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  color: #000;
+  letter-spacing: -0.05rem;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt{
+  display: none;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  color: #767676;
+  letter-spacing: -0.025rem;
+  opacity: 0;
+  transition: all .2s;
+}
+
+/*slide active*/
+.about_wrap .slide_txt_container .slide_wrap .slide_txt.active{
+  height: 14rem;
+}
+
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt.active .counter_wrap{
+  color: #000;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt.active strong,
+.about_wrap .slide_txt_container .slide_wrap .slide_txt.active .sub_txt{
+  display: block;
+  opacity: 1;
+}
+
+.about_wrap .slide_txt_container .slide_wrap .slide_txt.active .counter_wrap .count{
+  font-size: 5rem;
+  line-height: 5rem;
 }
 
 .about_wrap .counter {
