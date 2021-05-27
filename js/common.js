@@ -1,7 +1,9 @@
 $(function(){
+  /* scroll plugin */
   $('#fullpage').fullpage({
 		//options here
     // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors:['first', 'second','third','forth','five','six','seven'],
     showActiveTooltip: true,
 		autoScrolling: true,
 		scrollHorizontally: true,
@@ -15,34 +17,37 @@ $(function(){
           $.fn.fullpage.moveSlideRight();
       }, 3000);
   },
-    afterLoad: function(origin, destination, direction){
+    onLeave: function(origin, destination, direction){
       console.log(destination)
       if( destination > 1){
         $(".go_to_top").addClass("on");
         $("#header").addClass("on");
+        $("#gnbbtn").addClass("on");
       }else if( destination == 1 ){
         $(".go_to_top").removeClass("on");
         $("#header").removeClass("on");
+        $("#gnbbtn").removeClass("on");
       }else{
         $("#header").removeClass("on");
+        $("#gnbbtn").removeClass("on");
+      }
+    },
+    afterLoad:function(origin, destination, direction){
+      if( destination == 3 ){
+        $(".section02 .text_box").addClass("on");
+      }else if( destination == 4 ){
+        $("#atomypark .text_box").addClass("on");
+      }else if( destination == 5 ){
+        $(".section04 .section_inner h1").addClass("on");
       }
     }
 	});
+  $.fn.fullpage.setAllowScrolling(true); 
 
-  // $(window).scroll(function(){
-  //   // console.log($(this).scrollTop());
-  //   if( $(this).scrollTop() == 0 ){
-  //     $(".go_to_top").removeClass("on");
-  //   }else{
-  //     $(".go_to_top").addClass("on");
-  //   };
-
-  //   if( $(this).scrollTop() > 0){
-  //     $("#header").addClass("on");
-  //   }else{
-  //     $("#header").removeClass("on");
-  //   };
-  // });
+  /* go_to_top */
+  $(".go_to_top").on("click",function(){
+    $.fn.fullpage.moveTo(1);
+  });
 
   /* section05 map tapmenu mouseover */
   $(".map_tab ul li").mouseover(function(){
@@ -53,19 +58,6 @@ $(function(){
   }).mouseout(function(){
     $(".section05 .map").css("background-image","url('./img/worldwide_map.svg')");
   })
-
-  /*section offset().top 값으로 class추가*/
-  // let wHeight = $(window).innerHeight();
-  // console.log("window height : "+wHeight);
-  // $(window).scroll(function(){
-  //   let thisScrollTop = $(this).scrollTop();
-  //   console.log(thisScrollTop);
-  //   $(".section").each(function(){
-  //     let thisOffset = $(this).offset();
-  //     if( thisOffset.top <= thisScrollTop + addTop && thisScrollTop < thisOffset.top + wHeight ){
-  //       $(this).addClass("active");
-  //     }
-  //   })
 
   let imgNum = $(".about_item_img img").height();
   let txtNum = $(".slide_txt").height();
@@ -130,4 +122,7 @@ $(function(){
       $(".slide_txt_container .slide_wrap").animate({marginTop: parseInt(txtSlideWrap) - txtNum},500,"swing");
     }
   })
+
+  /* section05 map transition */
+
 });
