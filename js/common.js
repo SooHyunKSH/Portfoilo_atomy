@@ -5,7 +5,7 @@ $(function(){
     showActiveTooltip: true,
 		autoScrolling: true,
 		scrollHorizontally: true,
-    scrollingSpeed: 500,
+    scrollingSpeed: 700,
     slidesNavigation: true,
     scrollOverflow: false,
     css3: true,
@@ -14,23 +14,35 @@ $(function(){
       setInterval(function () {
           $.fn.fullpage.moveSlideRight();
       }, 3000);
-  }
+  },
+    afterLoad: function(origin, destination, direction){
+      console.log(destination)
+      if( destination > 1){
+        $(".go_to_top").addClass("on");
+        $("#header").addClass("on");
+      }else if( destination == 1 ){
+        $(".go_to_top").removeClass("on");
+        $("#header").removeClass("on");
+      }else{
+        $("#header").removeClass("on");
+      }
+    }
 	});
 
-  $(window).scroll(function(){
-    // console.log($(this).scrollTop());
-    if( $(this).scrollTop() == 0 ){
-      $(".go_to_top").removeClass("on");
-    }else{
-      $(".go_to_top").addClass("on");
-    };
+  // $(window).scroll(function(){
+  //   // console.log($(this).scrollTop());
+  //   if( $(this).scrollTop() == 0 ){
+  //     $(".go_to_top").removeClass("on");
+  //   }else{
+  //     $(".go_to_top").addClass("on");
+  //   };
 
-    if( $(this).scrollTop() > 0){
-      $("#header").addClass("on");
-    }else{
-      $("#header").removeClass("on");
-    };
-  });
+  //   if( $(this).scrollTop() > 0){
+  //     $("#header").addClass("on");
+  //   }else{
+  //     $("#header").removeClass("on");
+  //   };
+  // });
 
   /* section05 map tapmenu mouseover */
   $(".map_tab ul li").mouseover(function(){
