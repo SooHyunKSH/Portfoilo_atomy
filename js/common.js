@@ -3,7 +3,7 @@ $(function(){
   $('#fullpage').fullpage({
 		//options here
     // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    anchors:['first', 'second','third','forth','five','six','seven'],
+    // anchors:['first', 'second','third','forth','five','six','seven'],
     showActiveTooltip: true,
 		autoScrolling: true,
 		scrollHorizontally: true,
@@ -45,12 +45,12 @@ $(function(){
 
   /* screen 1230px일 때 lnb color change */
   if( $(window).innerWidth() < 1231 ){
-    $("#header #gnb ul li a").css("color","#333");
+      $("#header #gnb ul li a").css("color","#333");
   }
   $(window).resize(function(){
     if( $(window).innerWidth() < 1231 ){
       $("#header #gnb ul li a").css("color","#333");
-    }
+    };
   });
 
   /* go_to_top */
@@ -141,7 +141,13 @@ $(function(){
     });
   });
 
-  $(".section05 .map_tab_type2").on("change",function(){
-    console.log($(this).val());
+  /* section05 map selectbox area */
+  $(".section05 .map_tab_type2").on("change",function(i){
+    $(".map_txt_wrap").each(function(){
+      if( $(".section05 .map_tab_type2").val() == $(this).attr("id")){
+        $(".map_txt_wrap").removeClass("click");
+        $(this).addClass("click");
+      }
+    })
   });
 });
