@@ -134,6 +134,7 @@ input[type="checkbox"]#gnbcheck {
 
 #header.on #gnb ul li a {
   color: #333;
+  padding: 0 1.5rem;
 }
 
 #header .header_wrap {
@@ -556,15 +557,14 @@ input[type="checkbox"]#gnbcheck {
   font-weight: bold;
   line-height: 3.5rem;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   color: #000;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .section04 .section_inner h1.on {
   opacity: 1;
-  margin-bottom: 4rem;
 }
 
 .section04 .section_inner .csr_item_wrap {
@@ -614,7 +614,7 @@ input[type="checkbox"]#gnbcheck {
   /* width: 100%; */
   bottom: -90%;
   padding: 2rem 2rem;
-  transition: bottom 0.3s ease;
+  transition: bottom 0.5s ease;
   background: rgba(72, 171, 226, 0.9);
 }
 
@@ -1101,6 +1101,8 @@ input[type="checkbox"]#gnbcheck {
   }
 
   .section05 .common_btn {
+    position: relative;
+    bottom: 10%;
     float: left;
     margin-left: 1rem;
   }
@@ -1149,6 +1151,10 @@ input[type="checkbox"]#gnbcheck {
   }
 
   .section04 .section_inner .csr_item_wrap .csr_item .caption {
+    bottom: -80%;
+  }
+
+  .section04 .section_inner .csr_item_wrap .csr_item:hover .caption {
     bottom: -80%;
   }
 

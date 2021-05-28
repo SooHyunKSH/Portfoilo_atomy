@@ -127,8 +127,6 @@ $(function(){
       $(this).each(function(){
         $(".section05 .map").css("background-image","url('./img/worldwide_map0"+thisIndex+".svg')");
       });
-    }).mouseout(function(){
-      $(".section05 .map").css("background-image","url('./img/worldwide_map.svg')");
     })
     
   /* section05 map transition */
@@ -143,7 +141,7 @@ $(function(){
     });
   });
 
-  // $(".section05 .map_tab_type2").on("change",function(){
-  //   let $()
-  // });
+  $(".section05 .map_tab_type2").on("change",function(){
+    console.log($(this).val());
+  });
 });
