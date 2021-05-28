@@ -199,7 +199,7 @@ input[type="checkbox"]#gnbcheck {
   margin: 0 10rem;
   transform: translateY(-50%);
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .text_box.on {
@@ -400,7 +400,7 @@ input[type="checkbox"]#gnbcheck {
   display: none;
   font-size: 0.9rem;
   line-height: 1.4rem;
-  color: #767676;
+  color: #4e4d4d;
   letter-spacing: -0.025rem;
   opacity: 0;
   transition: all 0.2s;
@@ -696,6 +696,11 @@ input[type="checkbox"]#gnbcheck {
   font-family: "Noto Sans KR" sans-serif;
 }
 
+.section05 .map_tab ul li.click a{
+  background: #3e8fee;
+  color: #fff;
+}
+
 .section05 .map_tab ul li:hover a {
   background: #3e8fee;
   color: #fff;
@@ -723,7 +728,12 @@ input[type="checkbox"]#gnbcheck {
   z-index: 100;
 }
 
+.map_txt_wrap.click{
+  display: block;
+}
+
 .map_txt_wrap {
+  display: none;
   position: absolute;
   width: 100%;
   bottom: 10%;

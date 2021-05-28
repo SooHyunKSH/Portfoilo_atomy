@@ -18,7 +18,6 @@ $(function(){
       }, 3000);
   },
     onLeave: function(origin, destination, direction){
-      console.log(destination)
       if( destination > 1){
         $(".go_to_top").addClass("on");
         $("#header").addClass("on");
@@ -44,20 +43,20 @@ $(function(){
 	});
   $.fn.fullpage.setAllowScrolling(true); 
 
+  /* screen 1230px일 때 lnb color change */
+  if( $(window).innerWidth() < 1231 ){
+    $("#header #gnb ul li a").css("color","#333");
+  }
+  $(window).resize(function(){
+    if( $(window).innerWidth() < 1231 ){
+      $("#header #gnb ul li a").css("color","#333");
+    }
+  });
+
   /* go_to_top */
   $(".go_to_top").on("click",function(){
     $.fn.fullpage.moveTo(1);
   });
-
-  /* section05 map tapmenu mouseover */
-  $(".map_tab ul li").mouseover(function(){
-    let thisIndex = $(this).index() + 1;
-    $(this).each(function(){
-      $(".section05 .map").css("background-image","url('./img/worldwide_map0"+thisIndex+".svg')");
-    });
-  }).mouseout(function(){
-    $(".section05 .map").css("background-image","url('./img/worldwide_map.svg')");
-  })
 
   let imgNum = $(".about_item_img img").height();
   let txtNum = $(".slide_txt").height();
@@ -66,7 +65,6 @@ $(function(){
   let imgCount = $(".about_item_img").length;
   let imgIndex = $(".about_item_img").index();
   let slideTxtIndex = $(".slide_txt").index();
-  console.log(slideTxtIndex);
   
   /* section01 slide contents */
   $(".top_btn").on("click",function(){
@@ -123,6 +121,29 @@ $(function(){
     }
   })
 
+    /* section05 map tapmenu mouseover */
+    $(".map_tab ul li").mouseover(function(){
+      let thisIndex = $(this).index() + 1;
+      $(this).each(function(){
+        $(".section05 .map").css("background-image","url('./img/worldwide_map0"+thisIndex+".svg')");
+      });
+    }).mouseout(function(){
+      $(".section05 .map").css("background-image","url('./img/worldwide_map.svg')");
+    })
+    
   /* section05 map transition */
+  $(".map_txt_wrap:nth-of-type(1)").addClass("click");
+  $(".section05 .map_tab ul li").on("click",function(){
+    $(".section05 .map_tab ul li").removeClass("click");
+    $(this).addClass("click");
+    let thisIndex = $(this).index() + 1;
+    $(this).each(function(){
+      $(".map_txt_wrap").removeClass("click");
+      $(".map_txt_wrap:nth-of-type("+thisIndex+")").addClass("click");
+    });
+  });
 
+  // $(".section05 .map_tab_type2").on("change",function(){
+  //   let $()
+  // });
 });
