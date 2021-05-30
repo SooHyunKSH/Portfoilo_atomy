@@ -576,13 +576,11 @@ input[type="checkbox"]#gnbcheck {
 
 .csr_item_wrap {
   position: relative;
-  height: 26rem;
+  display: inline-block;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.csr_item_wrap .arrow_btn {
-  display: none;
+  overflow: hidden;
 }
 
 .csr_item_wrap .csr_inner_wrap {
@@ -592,7 +590,7 @@ input[type="checkbox"]#gnbcheck {
 .csr_item_wrap .csr_inner_wrap .csr_item {
   position: relative;
   display: inline-block;
-  height: 100%;
+  height: 26rem;
   width: 32%;
   margin-right: 1.5%;
   top: 10%;
@@ -992,8 +990,55 @@ input[type="checkbox"]#gnbcheck {
     left: 2rem;
   }
 
-  .csr_item_wrap .csr_inner_wrap .csr_item:nth-of-type(3) {
-    display: none;
+  .csr_item_wrap {
+    width: 90%;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item img {
+    position: relative;
+    width: 30%;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption {
+    position: relative;
+    width: 70%;
+    bottom: 0;
+    background: none;
+    color: #000;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption strong {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_txt {
+    margin-bottom: 0.5rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_btn {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    border-bottom: 1px solid #000;
+    border-top: none;
+  }
+
+  .left_btn {
+    left: 0.5rem;
+  }
+
+  .right_btn {
+    right: 0.5rem;
   }
 
   .section05 .map {
@@ -1087,6 +1132,10 @@ input[type="checkbox"]#gnbcheck {
     color: #444;
   }
 
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption strong {
+    font-size: 1rem;
+  }
+
   .section05 .map {
     background-position: center;
     background-size: 300%;
@@ -1126,6 +1175,10 @@ input[type="checkbox"]#gnbcheck {
 
   #atomypark .text_box {
     text-align: center;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_btn {
+    display: none;
   }
 
   .map_txt_wrap {
