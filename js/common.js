@@ -3,6 +3,8 @@ $(function () {
     $('#fullpage').fullpage({
         // options here licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE', anchors:['first',
         // 'second','third','forth','five','six','seven'],
+        menu: '#menu',
+        anchors: ['main', 'about', 'brand', 'atomypark', 'csr', 'global', 'news'],
         showActiveTooltip: true,
         autoScrolling: true,
         scrollHorizontally: true,
