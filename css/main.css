@@ -118,7 +118,7 @@ input[type="checkbox"]#gnbcheck {
 #header {
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 4rem;
   overflow: hidden;
   top: 0;
   z-index: 800;
@@ -129,7 +129,7 @@ input[type="checkbox"]#gnbcheck {
 }
 
 #header.on #top_logo a {
-  background: url("../img/f_logo01.png") no-repeat center;
+  background-image: url("../img/f_logo01.png");
 }
 
 #header.on #gnb ul li a {
@@ -154,9 +154,11 @@ input[type="checkbox"]#gnbcheck {
 
 #top_logo a {
   height: 40px;
-  line-height: 80px;
+  line-height: 4rem;
   padding: 0.5rem 2rem;
-  background: url("../img/f_logo.png") no-repeat center;
+  background-image: url("../img/f_logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* gnb area */
@@ -175,9 +177,9 @@ input[type="checkbox"]#gnbcheck {
 
 #gnb ul li a {
   display: block;
-  font-size: 18px;
-  height: 60px;
-  line-height: 80px;
+  font-size: 0.9rem;
+  height: 3rem;
+  line-height: 4rem;
   padding: 0 20px;
   text-transform: uppercase;
 }
@@ -258,7 +260,7 @@ input[type="checkbox"]#gnbcheck {
   height: 2.5rem;
   right: 0;
   border-radius: 100%;
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #e3e6e8;
 }
 
@@ -354,6 +356,7 @@ input[type="checkbox"]#gnbcheck {
 .about_wrap .slide_container .slide_wrap .about_item_img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .about_wrap .slide_txt_container {
@@ -468,12 +471,16 @@ input[type="checkbox"]#gnbcheck {
 
 .about_wrap .top_btn {
   top: 36%;
-  background: url("../img/top_arrow.png") no-repeat center;
+  background-image: url("../img/top_arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about_wrap .bottom_btn {
   top: 58%;
-  background: url("../img/bottom_arrow.png") no-repeat center;
+  background-image: url("../img/bottom_arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*section02 area*/
 .section02 {
@@ -580,7 +587,6 @@ input[type="checkbox"]#gnbcheck {
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
 }
 
 .csr_item_wrap .csr_inner_wrap {
@@ -606,6 +612,7 @@ input[type="checkbox"]#gnbcheck {
   position: absolute;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .csr_item_wrap .csr_inner_wrap .csr_item .caption {
@@ -1148,17 +1155,13 @@ input[type="checkbox"]#gnbcheck {
     font-size: 18px;
   }
 
-  .text_box {
-    margin: 0 1rem;
+  .arrow_btn{
+    background-size: 60%;
   }
 
   .about_wrap .slide_txt_container {
     left: 0;
     text-align: center;
-  }
-
-  .about_wrap .slide_txt_container .slide_wrap {
-    left: 0;
   }
 
   .section05 .map {
@@ -1238,6 +1241,7 @@ input[type="checkbox"]#gnbcheck {
     font-size: 0.5rem;
     line-height: 1rem;
     font-weight: 300;
+    padding: 0 1rem;
   }
 }
 
@@ -1249,10 +1253,16 @@ input[type="checkbox"]#gnbcheck {
 
   #top_logo a {
     padding: 0.5rem 2.5rem;
+    background-size: 80%;
   }
 
-  .about_wrap .slide_txt_container {
-    left: 0;
+  #gnbbtn{
+    width: 18px;
+    top: 12px;
+  }
+
+  #mobile_close_btn::before, #mobile_close_btn::after{
+    width: 18px;
   }
 
   .about_wrap .slide_txt_container .slide_wrap {
@@ -1263,14 +1273,46 @@ input[type="checkbox"]#gnbcheck {
     padding: 1.3rem 0;
   }
 
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt{
+    font-size: .5rem;
+    line-height: 1rem;
+  }
+
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active .counter_wrap .count{
+    font-size: 4rem;
+  }
+
   .section04 .section_inner h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item{
+    height: 8rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption strong{
+    font-size: 0.9rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption{
+    padding: 0.5rem 1rem;
+  }
+
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_txt{
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+
+  .section05 .map_tab_type2{
+    top: 6rem;
   }
 
   .section06 .section_inner .headnews .caption {
     width: 100%;
     text-align: center;
     padding: 2rem 0 4.5rem 0;
+    font-size: 0.7rem;
   }
   .section06 .section_inner .subnews .newsitem {
     width: 100%;
@@ -1283,5 +1325,22 @@ input[type="checkbox"]#gnbcheck {
 
   .section06 .section_inner .subnews .newsitem .news_img {
     height: 15rem;
+  }
+
+  .section06 .section_inner .subnews .newsitem .caption{
+    font-size: 0.7rem;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+  .about_wrap .slide_txt_container .slide_wrap{
+    left: 0;
+  }
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt{
+    display: none !important;
+  }
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active{
+    height: 10rem;
   }
 }

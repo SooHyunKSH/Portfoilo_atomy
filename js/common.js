@@ -1,8 +1,10 @@
 $(function () {
     /* scroll plugin */
     $('#fullpage').fullpage({
-        // options here licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE', anchors:['first',
-        // 'second','third','forth','five','six','seven'],
+        // options here licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE', 
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:['first','second','third','forth','five','six','seven'],
         showActiveTooltip: true,
         autoScrolling: true,
         scrollHorizontally: true,
