@@ -139,7 +139,7 @@ $(function () {
         }
     })
 
-    /* section05 map tapmenu mouseover */
+    /* section05 map tabmenu mouseover */
     $(".map_tab ul li").mouseover(function () {
         let thisIndex = $(this).index() + 1;
         $(this).each(function () {
