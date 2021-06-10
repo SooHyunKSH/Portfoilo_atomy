@@ -9,7 +9,6 @@ body {
     "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
 }
 /* common ui */
-
 /* go to top button */
 .go_to_top {
   position: fixed;
@@ -1155,7 +1154,7 @@ input[type="checkbox"]#gnbcheck {
     font-size: 18px;
   }
 
-  .arrow_btn{
+  .arrow_btn {
     background-size: 60%;
   }
 
@@ -1256,12 +1255,13 @@ input[type="checkbox"]#gnbcheck {
     background-size: 80%;
   }
 
-  #gnbbtn{
+  #gnbbtn {
     width: 18px;
     top: 12px;
   }
 
-  #mobile_close_btn::before, #mobile_close_btn::after{
+  #mobile_close_btn::before,
+  #mobile_close_btn::after {
     width: 18px;
   }
 
@@ -1273,12 +1273,24 @@ input[type="checkbox"]#gnbcheck {
     padding: 1.3rem 0;
   }
 
-  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt{
-    font-size: .5rem;
-    line-height: 1rem;
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active {
+    height: 10rem;
   }
 
-  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active .counter_wrap .count{
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt {
+    display: none;
+  }
+
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active .sub_txt {
+    display: none;
+  }
+
+  .about_wrap
+    .slide_txt_container
+    .slide_wrap
+    .slide_txt.active
+    .counter_wrap
+    .count {
     font-size: 4rem;
   }
 
@@ -1287,24 +1299,24 @@ input[type="checkbox"]#gnbcheck {
     margin-bottom: 2rem;
   }
 
-  .csr_item_wrap .csr_inner_wrap .csr_item{
+  .csr_item_wrap .csr_inner_wrap .csr_item {
     height: 8rem;
   }
 
-  .csr_item_wrap .csr_inner_wrap .csr_item .caption strong{
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption strong {
     font-size: 0.9rem;
   }
 
-  .csr_item_wrap .csr_inner_wrap .csr_item .caption{
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption {
     padding: 0.5rem 1rem;
   }
 
-  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_txt{
+  .csr_item_wrap .csr_inner_wrap .csr_item .caption .more_txt {
     font-size: 0.5rem;
     line-height: 1rem;
   }
 
-  .section05 .map_tab_type2{
+  .section05 .map_tab_type2 {
     top: 6rem;
   }
 
@@ -1327,20 +1339,19 @@ input[type="checkbox"]#gnbcheck {
     height: 15rem;
   }
 
-  .section06 .section_inner .subnews .newsitem .caption{
+  .section06 .section_inner .subnews .newsitem .caption {
     font-size: 0.7rem;
   }
-
 }
 
-@media screen and (max-width: 320px){
-  .about_wrap .slide_txt_container .slide_wrap{
+@media screen and (max-width: 320px) {
+  .about_wrap .slide_txt_container .slide_wrap {
     left: 0;
   }
-  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt{
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt .sub_txt {
     display: none !important;
   }
-  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active{
+  .about_wrap .slide_txt_container .slide_wrap .slide_txt.active {
     height: 10rem;
   }
 }

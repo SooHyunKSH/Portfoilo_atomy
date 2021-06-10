@@ -12,6 +12,7 @@ $(function () {
         slidesNavigation: true,
         scrollOverflow: false,
         css3: true,
+        responsiveWidth: 415,
         slidesNavPosition: 'bottom',
         afterRender: function () {
             setInterval(function () {
